@@ -12,6 +12,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import MenuIcon from "@material-ui/icons/Menu";
 import Main from "./components/main";
+import NavTabs from "./components/navBar";
 
 const drawerWidth = 240;
 
@@ -112,6 +113,7 @@ function App() {
           </Typography>
         </Toolbar>
       </AppBar>
+      <NavTabs />
       <Drawer
         className={classes.drawer}
         variant="persistent"
