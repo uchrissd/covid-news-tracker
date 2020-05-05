@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-class News extends Component {
+class Tracker extends Component {
   render() {
     return <div></div>;
   }
 }
 
-export default News;
+export default Tracker;

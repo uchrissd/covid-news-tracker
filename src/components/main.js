@@ -4,13 +4,15 @@ import Landing from "./landingPage";
 import News from "./latestNews";
 import Tips from "./tips";
 import Newsletter from "./newsletter";
+import Tracker from "./tracker";
 
 const Main = () => (
   <Switch>
     <Route exact path="/" component={Landing} />
-    <Route path="/contact" component={Contact} />
-    <Route path="/projects" component={Projects} />
-    <Route path="/about" component={About} />
+    <Route path="/latestNews" component={News} />
+    <Route path="/tipss" component={Tips} />
+    <Route path="/newsletter" component={Newsletter} />
+    <Route path="/tracker" component={Tracker} />
   </Switch>
 );
 
