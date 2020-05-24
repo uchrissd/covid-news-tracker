@@ -14,6 +14,10 @@ const useStyles = makeStyles({
   gridContainer: {
     paddingLeft: "40px",
     paddingRight: "40px",
+    paddingTop: "40px",
+  },
+  cardStyle: {
+    backgroundColor: "#f7f5f5",
   },
   bullet: {
     display: "inline-block",
@@ -33,9 +37,14 @@ export default function Tracker() {
 
   return (
     <div>
-      <Grid container spacing={4} className={classes.gridContainer}>
+      <Grid
+        container
+        spacing={4}
+        className={classes.gridContainer}
+        justify="center"
+      >
         <Grid item xs={12} sm={6} md={4}>
-          <Card className={classes.root}>
+          <Card className={(classes.rootclasses, classes.cardStyle)}>
             <CardContent>
               <div></div>
               <Typography>Confirmed Cases</Typography>
@@ -51,7 +60,7 @@ export default function Tracker() {
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Card className={classes.root}>
+          <Card className={(classes.rootclasses, classes.cardStyle)}>
             <CardContent>
               <div></div>
               <Typography>Deaths</Typography>
