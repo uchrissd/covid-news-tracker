@@ -47,6 +47,7 @@ function App() {
           </Typography>
         </Toolbar>
       </AppBar>
+
       <Landing />
     </div>
   );

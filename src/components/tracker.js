@@ -5,6 +5,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 
 import Typography from "@material-ui/core/Typography";
+import { Grid } from "@material-ui/core";
 
 const classes = makeStyles({
   root: {
@@ -27,34 +28,40 @@ class Tracker extends Component {
   render() {
     return (
       <div>
-        <Card className={classes.root}>
-          <CardContent>
-            <div></div>
-            <Typography>Confirmed Cases</Typography>
-          </CardContent>
-          <CardContent>
-            <div></div>
-            <Typography>today</Typography>
-          </CardContent>
-          <CardContent>
-            <div></div>
-            <Typography>yesterday</Typography>
-          </CardContent>
-        </Card>
-        <Card className={classes.root}>
-          <CardContent>
-            <div></div>
-            <Typography>Deaths</Typography>
-          </CardContent>
-          <CardContent>
-            <div></div>
-            <Typography>today</Typography>
-          </CardContent>
-          <CardContent>
-            <div></div>
-            <Typography>yesterday</Typography>
-          </CardContent>
-        </Card>
+        <Grid container spacing={4}>
+          <Grid item xs={3}>
+            <Card className={classes.root}>
+              <CardContent>
+                <div></div>
+                <Typography>Confirmed Cases</Typography>
+              </CardContent>
+              <CardContent>
+                <div></div>
+                <Typography>today</Typography>
+              </CardContent>
+              <CardContent>
+                <div></div>
+                <Typography>yesterday</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={3}>
+            <Card className={classes.root}>
+              <CardContent>
+                <div></div>
+                <Typography>Deaths</Typography>
+              </CardContent>
+              <CardContent>
+                <div></div>
+                <Typography>today</Typography>
+              </CardContent>
+              <CardContent>
+                <div></div>
+                <Typography>yesterday</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
       </div>
     );
   }
