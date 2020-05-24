@@ -16,6 +16,9 @@ const useStyles = makeStyles({
     paddingRight: "40px",
     paddingTop: "40px",
   },
+  textStyle: {
+    minWidth: 345,
+  },
   cardStyle: {
     backgroundColor: "#f7f5f5",
   },

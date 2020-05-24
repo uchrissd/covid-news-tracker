@@ -10,12 +10,17 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  navbarStyle: {
+    paddingTop: "20px",
+    paddingBottom: "20px",
+    textAlign: "center",
+    fontFamily: "Arial",
+    flexGrow: 1,
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  title: {
-    flexGrow: 1,
-  },
+
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
@@ -38,11 +43,7 @@ function App() {
         }}
       >
         <Toolbar>
-          <Typography
-            variant="h3"
-            className={classes.title}
-            style={{ textAlign: "center", fontFamily: "Arial" }}
-          >
+          <Typography variant="h3" className={classes.navbarStyle}>
             <strong>California Coronavirus Tracker</strong>
           </Typography>
         </Toolbar>
