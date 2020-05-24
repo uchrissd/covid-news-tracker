@@ -7,9 +7,13 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { Grid } from "@material-ui/core";
 
-const classes = makeStyles({
+const useStyles = makeStyles({
   root: {
     minWidth: 345,
+  },
+  gridContainer: {
+    paddingLeft: "40px",
+    paddingRight: "40px",
   },
   bullet: {
     display: "inline-block",
@@ -24,47 +28,45 @@ const classes = makeStyles({
   },
 });
 
-class Tracker extends Component {
-  render() {
-    return (
-      <div>
-        <Grid container spacing={4}>
-          <Grid item xs={3}>
-            <Card className={classes.root}>
-              <CardContent>
-                <div></div>
-                <Typography>Confirmed Cases</Typography>
-              </CardContent>
-              <CardContent>
-                <div></div>
-                <Typography>today</Typography>
-              </CardContent>
-              <CardContent>
-                <div></div>
-                <Typography>yesterday</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={3}>
-            <Card className={classes.root}>
-              <CardContent>
-                <div></div>
-                <Typography>Deaths</Typography>
-              </CardContent>
-              <CardContent>
-                <div></div>
-                <Typography>today</Typography>
-              </CardContent>
-              <CardContent>
-                <div></div>
-                <Typography>yesterday</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-      </div>
-    );
-  }
-}
+export default function Tracker() {
+  const classes = useStyles();
 
-export default Tracker;
+  return (
+    <div>
+      <Grid container spacing={4} className={classes.gridContainer}>
+        <Grid item xs={12} sm={6} md={4}>
+          <Card className={classes.root}>
+            <CardContent>
+              <div></div>
+              <Typography>Confirmed Cases</Typography>
+            </CardContent>
+            <CardContent>
+              <div></div>
+              <Typography>today</Typography>
+            </CardContent>
+            <CardContent>
+              <div></div>
+              <Typography>yesterday</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Card className={classes.root}>
+            <CardContent>
+              <div></div>
+              <Typography>Deaths</Typography>
+            </CardContent>
+            <CardContent>
+              <div></div>
+              <Typography>today</Typography>
+            </CardContent>
+            <CardContent>
+              <div></div>
+              <Typography>yesterday</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+    </div>
+  );
+}
